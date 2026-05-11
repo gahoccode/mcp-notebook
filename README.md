@@ -10,6 +10,9 @@
 
 ```python
 from contextlib import asynccontextmanager
+from fastapi import FastAPI
+from fastmcp import FastMCP
+
 api = FastAPI()
 mcp = FastMCP.from_fastapi(api)
 mcp_app = mcp.http_app(path='/mcp')
